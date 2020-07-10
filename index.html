@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bowen</title>
+		<link rel="stylesheet" href="./css/estilos.css" type="text/css"/>
+		<script src="./js/sha256.js"></script>
+		<script src="./js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>
+				¡Javascript!
+			</h1>
+		</header>
+		<section>
+			<select id="temas" onchange="temaSeleccionado()"> 
+				<option value="0" selected>Seleccione...</option>
+				<option value="datos">Datos</option> 
+				<option value="if">if</option>
+				<option value="while">while</option>
+				<option value="for">for</option>
+				<option value="forin">forin</option>
+				<option value="estilo">estilo</option>
+				<option value="imagenes">imagenes</option>
+				<option value="prom">promedio</option>
+				<option value="encriptar">Encriptar</option>
+			</select> 
+			
+			<article id="datos" class="contenedor">
+				<h3>Datos<h3>
+				<input type="text" id="letra" placeholder="Introduce una Letra"/>
+				<input type="text" id="n1" placeholder="Introduce un Número con Decimales"/>
+				<input type="button" value="Mostrar" id="mDatos"/>
+			</article>
+			
+			<article id="if" class="contenedor">
+				<h3>if<h3>
+				<input type="text" id="n2" placeholder="Introduce un Número Entero"/>
+				<input type="radio" name="opcion" value="a" checked/>Par/Impar
+				<input type="radio" name="opcion" value="b" />Votar
+				<a onclick="si()">Identificar</a>
+			</article>
+			
+			<article id="while" class="contenedor">
+				<h3>while<h3>
+				<input type="text" id="n3" placeholder="Introduce un Número Entero"/>
+				<input type="button" value="Calcular" onclick="factorialWhile()"/>
+                <label id="etiqueta"></label>
+                <input type="text" id="res" placeholder="El Resultado es:" disabled/>
+			</article>
+			
+			<article id="for" class="contenedor">
+				<h3>for<h3>
+				<input type="text" id="n4" placeholder="Introduce un Número Entero"/>
+				<span onclick="factorial()">Calcular</span>
+			</article>
+			
+			<article id="forin" class="contenedor">
+				<h3>forin<h3>
+				<input type="text" id="n5" placeholder="Día de la Semana (Número)"/>
+				<input type="button" value="Mostrar" onclick="arreglo()"/>
+			</article>
+			
+			<article id="estilo" class="contenedor">
+				<h3>Modificar Estilo<h3>
+				<div class="verde" onmouseover="verde()"></div>
+				<div class="azul" onmouseover="azul()"></div>
+				<div class="todo" onmouseover="todo()"></div>
+				<div class="nada" onmouseover="nada()"></div>
+			</article>
+
+			<!----- Resolver con addEventListener
+			<article id="imagenes" class="contenedor">
+				<h3>Seleccionar imágen</h3>
+				<img src="../img/usuario.png" alt="" id="foto" class="foto">
+				<img src="../img/u1.png" alt="" class="galeria" name="u1" >
+				<img src="../img/u2.png" alt="" class="galeria" name="u2" >
+				<img src="../img/u3.png" alt="" class="galeria" name="u3" >
+				<img src="../img/u4.png" alt="" class="galeria" name="u4" >
+			</article>
+			------>
+
+			<!----- Resolver con paso de parametros----->
+			<article id="imagenes" class="contenedor">
+				<h3>Seleccionar imágen</h3>
+				<img src="../img/usuario.png" alt="" id="foto" class="foto">
+				<img src="../img/u1.png" alt="" class="galeria" onclick="usuarios('u1')">
+				<img src="../img/u2.png" alt="" class="galeria" onclick="usuarios('u2')">
+				<img src="../img/u3.png" alt="" class="galeria" onclick="usuarios('u3')">
+				<img src="../img/u4.png" alt="" class="galeria" onclick="usuarios('u4')">
+			</article>
+			
+			
+			<article id="prom" class="contenedor">
+				<h3>Datos<h3>
+				<input type="number" id="num1"/>
+				<input type="number" id="num2"/>
+				<input type="number" id="num3"/>
+				<input type="button" value="Calcular" onclick="promedio()"/>
+			</article>
+
+			<article id="encriptar" class="contenedor">
+				<h3>Login<h3>
+				<input type="text" id="usuario" placeholder="Usuario..."/>
+				<input type="password" id="contraseña" placeholder="Contraseña..."/>
+				<input type="button" value="Mostrar" id="encripta"/>
+			</article>
+
+
+
+			<p id="resultado" class="res">Selecciona una opción</p>
+		</section>
+		
+		<footer>
+            Estructuras Condicionales, Estructuras de Control y Estilos.
+		</footer>
+		
+
+		
+	</body>
+</html>
+
+
+
+
+
+
+
